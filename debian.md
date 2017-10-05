@@ -58,3 +58,15 @@ Ok we are ready to start the installation of debian 9.
 ### Proxi
 21. Leave blank
 
+### Configuring system
+22. Send statistics: **NO**
+23. Softwares to install:
+    - SSH server
+    - standard system utilities
+24. GRUP boot loader: **YES**
+25. Devide for boot loader: Your base disk
+26. **REBOT on your fresh install of debian**
+> You can disconect the .iso installation file.
+
+## Your new debian install
+Now we have a complete install of debian. You can log you in with your usrername and password. **Never connect with root by default**
