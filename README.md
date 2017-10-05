@@ -1,4 +1,12 @@
-# SharedHosting
+# CLD1-STACK-WEB
+**A siple and fast Linux, Nginx, Php and MariaDB web stack.**
+
+
+<div align="center">
+  [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+</div>
+
+## SharedHosting
 
 L'objectif est de créer une machine permettant l'hébérgement de plusieurs sites web.
 Cette machine tournera sous Linux, l'installation et la configuration se fait "from scratch"
