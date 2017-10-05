@@ -8,8 +8,15 @@
 # configuring new php vhost
 
 # creating new mariaDB user and database
+echo "Enter the DB name :"
+read DBName
+echo "Enter the username :"
+read username
+echo "Enter the user password :"
+read -s password
+
 touch /tmp.sql
-echo "CREATE DATABASE "$1";" > /tmp.sql
-echo "GRANT ALL ON "$1".* TO "$1"@localhost IDENTIFIED BY '"$2"';" >> /tmp.sql
+echo "CREATE DATABASE "$DBName";" > /tmp.sql
+echo "GRANT ALL ON "$DBName".* TO "$username"@localhost IDENTIFIED BY '"$password"';" >> /tmp.sql
 
 mysql -u root -p < /tmp.sql
