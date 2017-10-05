@@ -1,11 +1,10 @@
 # CLD1-STACK-WEB
-**A siple and fast Linux, Nginx, Php and MariaDB web stack.**
+**A simple and fast Linux, Nginx, Php and MariaDB web stack.**
 
 
 <div align="center">
   
   [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
-  [![forthebadge](http://forthebadge.com/images/badges/for-you.svg)](http://forthebadge.com)
   [![forthebadge](http://forthebadge.com/images/badges/winter-is-coming.svg)](http://forthebadge.com)
   
 </div>
