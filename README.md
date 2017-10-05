@@ -1,10 +1,13 @@
-# CLD1-STACK-WEB
-**A simple and fast Linux, Nginx, Php and MariaDB web stack.**
-
-
+<div align"center">
 
   [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
   [![forthebadge](http://forthebadge.com/images/badges/winter-is-coming.svg)](http://forthebadge.com)
+
+# CLD1-STACK-WEB
+
+</div>
+
+**A simple and fast Linux, Nginx, Php and MariaDB web stack.**
 
 ## Documentation
 - [Debian installation](debian.md)
