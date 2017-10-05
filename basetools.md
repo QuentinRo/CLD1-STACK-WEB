@@ -49,3 +49,9 @@ Vim is a pwerful comand line editor. We are going to use it to modify conf files
 ```bash
 sudo apt-get install vim
 ```
+
+## GIT
+Without git our server in a non sense.
+```bash
+sudo apt-get install git
+```
