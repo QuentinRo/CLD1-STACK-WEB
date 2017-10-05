@@ -9,6 +9,13 @@
   
 </div>
 
+## Documentation
+- [Debian installation](debian.md)
+- [Basic tooling installation](basetools.md)
+- [PHP installation](php.md)
+- [NGNIX installation](Nginx.md)
+- [MariaDB installation](mariaDB.md)
+
 
 ## SharedHosting
 
