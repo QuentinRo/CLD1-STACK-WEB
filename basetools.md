@@ -35,3 +35,9 @@ Tu use a ssh connexion you need a client on our local machine.
     - [cmder](http://cmder.net/)
     - [Putty](http://www.putty.org/)
     - Many others
+
+### Connecting with SSH
+Connecting tou your server with ssh, simply use the ssh client you have just installed or type the ssh command with your username and the ip of our server.
+```bash
+ssh username@192.168.1.1
+```
