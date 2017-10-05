@@ -46,7 +46,7 @@ Ok we are ready to start the installation of debian 9.
 ### Configuring disks
 13. Partition type: We use *Guided - use entire disk*.
 14. Select our disk
-15. Partition scheme: All files in one disk
+15. Partition scheme: All files in one partition
 16. Partition recap: Ok -> finish partitioning
 17. Write changes to disk: **YES**
 18. Scan aditional CD or DVD: **NO**
@@ -55,7 +55,7 @@ Ok we are ready to start the installation of debian 9.
 19. Mirror country: select your country
 20. Mirrors list: Select a mirror in the list
 
-### Proxi
+### Proxy
 21. Leave blank
 
 ### Configuring system
@@ -65,8 +65,15 @@ Ok we are ready to start the installation of debian 9.
     - standard system utilities
 24. GRUP boot loader: **YES**
 25. Devide for boot loader: Your base disk
-26. **REBOT on your fresh install of debian**
+26. **REBOOT on your fresh install of debian**
 > You can disconect the .iso installation file.
 
 ## Your new debian install
 Now we have a complete install of debian. You can log you in with your usrername and password. **Never connect with root by default**
+
+### Finalizing the install
+Just a few things to finalize to get all the packages up to date.
+1. Login with your acount
+2. Use '<su>' to connect you with the root user
+3. type the root password
+4. run '<apt-get update>' This will just update the list of packages sources of the system.
