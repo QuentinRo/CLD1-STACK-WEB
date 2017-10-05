@@ -12,6 +12,10 @@ We install a few helpful php modules
 ```bash
 # Module to comuniques with mySQL databases
 sudo apt-get install php-mysql
+# To work with images in php
+sudo apt-get install php-gd
+# We always need curl
+sudo apt-get install php-curl
 ```
 
 ## Automaticly start PHP-fpm
