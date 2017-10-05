@@ -43,3 +43,9 @@ ssh username@192.168.1.1
 ```
 
 > If you dont know the ip of our server, simply run the `ip addr` command
+
+## VIM
+Vim is a pwerful comand line editor. We are going to use it to modify conf files
+```bash
+sudo apt-get install vim
+```
