@@ -5,6 +5,8 @@
 <div align="center">
   
   [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+  [![forthebadge](http://forthebadge.com/images/badges/for-you.svg)](http://forthebadge.com)
+  [![forthebadge](http://forthebadge.com/images/badges/winter-is-coming.svg)](http://forthebadge.com)
   
 </div>
 
