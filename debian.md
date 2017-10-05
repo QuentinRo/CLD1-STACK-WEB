@@ -74,6 +74,6 @@ Now we have a complete install of debian. You can log you in with your usrername
 ### Finalizing the install
 Just a few things to finalize to get all the packages up to date.
 1. Login with your acount
-2. Use '<su>' to connect you with the root user
+2. Use `su` to connect you with the root user
 3. type the root password
-4. run '<apt-get update>' This will just update the list of packages sources of the system.
+4. run `apt-get update` This will just update the list of packages sources of the system.

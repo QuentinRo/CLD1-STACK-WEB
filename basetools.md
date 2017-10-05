@@ -1,14 +1,14 @@
-# Installing some base tools
+# Installing some basic tooling
 To increase our efficiency, we install some tools on our base debian install.
 
 ## SUDO
 Sudo alows to momentarily gets the privileges of the superuser.
-He add a '<sudo>' command on the system. Then wen we want to launch a command with superuser privileges, we simply use '<sudo>' before the command, after that the prompt will ask your password.
+He add a `sudo` command on the system. Then wen we want to launch a command with superuser privileges, we simply use `sudo` before the command, after that the prompt will ask your password.
 
 ### Installing sudo
-1. Connect you to the root acount with '<su>'
-2. Run '<apt-get install sudo>' (this will install de sudo package)
-3. Type '<visudo>' To configure de sudoers (this command will open the /etc/suders file with nano editor)
+1. Connect you to the root acount with `su`
+2. Run `apt-get install sudo` (this will install de sudo package)
+3. Type `visudo` To configure de sudoers (this command will open the /etc/suders file with nano editor)
 4. We add a new line in this file to give to our account the sudo privileges. Simply replace 'username' by your username.
 ```bash
 # User privilege specifications
@@ -27,6 +27,10 @@ sudo apt-get install openssh-server
 
 ### Installing an SSH client
 Tu use a ssh connexion you need a client on our local machine.
+- Linux
+    - `sudo apt-get install openssh`
+- MacOS
+    - the ssh command is available by default on the system
 - Microsoft windows, serveal tools exist :
     - [cmder](http://cmder.net/)
     - [Putty](http://www.putty.org/)
