@@ -41,3 +41,5 @@ Connecting tou your server with ssh, simply use the ssh client you have just ins
 ```bash
 ssh username@192.168.1.1
 ```
+
+> If you dont know the ip of our server, simply run the `ip addr` command
