@@ -9,3 +9,7 @@
 
 # creating new mariaDB user and database
 touch /tmp.sql
+echo "CREATE DATABASE "$1";" > /tmp.sql
+echo "GRANT ALL ON "$1".* TO "$1"@localhost IDENTIFIED BY '"$2"';" >> /tmp.sql
+
+mysql -u root -p < /tmp.sql
