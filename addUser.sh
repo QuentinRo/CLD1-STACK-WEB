@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Demande les infos a l'utilisateur
-echo -e "\033[32m\033[1m"
+echo -e "\033[1;32m"
 echo "------------------------------------------------------"
 echo "This his the automatic user configuration script !"
 echo "Follow the instructions !"
@@ -52,6 +52,9 @@ TEXTBLOCK
 
 chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
+
+# adds nginx user to the group
+usermod -a -G $username www-data
 
 
 # crée un pool php

@@ -22,7 +22,7 @@ We found here the script to auto add new user and configure his site. [AddUserSc
 More infos about this script [here](users.md)
 
 ### Isolation test by **@phurni**
-[isolation_test](isolation_test.md))
+[isolation_test](isolation_test.md)
 
 ### Lesson goals (MOD-CLD1)
 [objectifs](sharedhosting.md)
