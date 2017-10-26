@@ -21,4 +21,11 @@ sudo mysql_secure_installation
 
 The installation ask a new password for the MariaDB "root" user, define one
 
+<div align="center">
+<hr>
 
+**Installation steps**
+
+[Previous](Nginx.md) / [Next](users.md)
+
+</div>

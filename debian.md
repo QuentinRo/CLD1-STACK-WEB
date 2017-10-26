@@ -77,3 +77,12 @@ Just a few things to finalize to get all the packages up to date.
 2. Use `su` to connect you with the root user
 3. type the root password
 4. run `apt-get update` This will just update the list of packages sources of the system.
+
+<div align="center">
+<hr>
+
+**Installation steps**
+
+[Previous](README.md) / [Next](basetools.md)
+
+</div>

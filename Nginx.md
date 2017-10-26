@@ -51,3 +51,12 @@ server {
   return 444;
 }
 ```
+
+<div align="center">
+<hr>
+
+**Installation steps**
+
+[Previous](php.md) / [Next](mariaDB.md)
+
+</div>
