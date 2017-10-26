@@ -27,7 +27,25 @@ adduser username
 ### Configure php pool
 Here we create a new php pool dedicatet to the new user
 ```bash
+sudo vim /etc/php5/fpm/pool.d/app1.conf
+```
 
+And type this in the file
+```conf
+[app1]
+user = app1
+group = app1
+listen = /var/run/php7.0-fpm-site1.sock
+listen.owner = www-data
+listen.group = www-data
+php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_flag[allow_url_fopen] = off
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3
+chdir = /
 ```
 
 ### Nginx virtualhost Configuration
