@@ -21,5 +21,8 @@
 We found here the script to auto add new user and configure his site. [AddUserScript](addUser.sh)  
 More infos about this script [here](users.md)
 
-## Lesson goals (MOD-CLD1)
+### Isolation test by **@phurni**
+[isolation_test](isolation_test.md))
+
+### Lesson goals (MOD-CLD1)
 [objectifs](sharedhosting.md)
