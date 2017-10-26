@@ -17,5 +17,9 @@
 - [MariaDB installation](mariaDB.md)
 - [Configuring a user website](users.md)
 
-## Objectifs du module de cours
+## Auto add user script
+We found here the script to auto add new user and configure his site. [AddUserScript](addUser.sh)  
+More infos about this script [here](users.md)
+
+## Lesson goals (MOD-CLD1)
 [objectifs](sharedhosting.md)
