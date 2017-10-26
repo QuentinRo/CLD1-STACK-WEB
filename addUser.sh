@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Demande les infos a l'utilisateur
-echo -e "\033[32mBold"
+echo -e "\033[32m\033[1m"
 echo "------------------------------------------------------"
 echo "This his the automatic user configuration script !"
 echo "Follow the instructions !"
-echo -e "\033[0mNormal"
+echo -e "\033[0m"
 
 echo 
 echo "Enter the new username : "
