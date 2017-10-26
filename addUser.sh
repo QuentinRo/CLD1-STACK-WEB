@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Demande les infos a l'utilisateur
-echo -e "\033[32m"
+echo -e "\033[32mBold"
 echo "------------------------------------------------------"
-echo "This his the automatic user configuration script !\n"
-echo "Follow the instructions !\n"
-echo -e "\033[0m"
+echo "This his the automatic user configuration script !"
+echo "Follow the instructions !"
+echo -e "\033[0mNormal"
 
 echo 
 echo "Enter the new username : "
@@ -42,7 +42,13 @@ else
 adduser --disabled-password --gecos "" $username
 echo $username":"$password|chpasswd
 
+# Add phpinfo in the www site of the user
 mkdir /home/$username/www
+cat > /home/$username/www/index.php <<TEXTBLOCK
+<?php
+phpinfo();
+TEXTBLOCK
+
 chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
 
@@ -102,14 +108,6 @@ echo "CREATE DATABASE DB_"$username";" > /tmp.sql
 echo "GRANT ALL ON DB_"$username".* TO "$username"@localhost IDENTIFIED BY '"$password"';" >> /tmp.sql
 
 mysql -u "root" -p$rootpwd < /tmp.sql
-
-
-
-# Add phpinfo in the www site of the user
-cat > /home/$username/www/index.php <<TEXTBLOCK
-<?php
-phpinfo();
-TEXTBLOCK
 
 
 
