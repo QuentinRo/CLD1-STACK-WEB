@@ -37,6 +37,7 @@ then
   echo
 else
 
+echo -e "\033[33m"
 
 # ajoute un utilisateur
 adduser --disabled-password --gecos "" $username
