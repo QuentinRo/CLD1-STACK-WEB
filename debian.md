@@ -23,37 +23,37 @@ In this exercice i use a virtual machine, but the procedure is the same on pysic
 ### Starting the machine
 Ok we are ready to start the installation of debian 9.
 
-1. Connect the .iso installation file to our WM. (or your botable key if your on pysical machine)
+1. Connect the .iso installation file to our WM. (or your bootable key if your on physical machine)
 2. Start the machine.
 3. Select the Install menu.
 
 > Note, this is self-evident, but you must be connected to internet to follow the instalation guide.
 
 ### Configuring the OS
-1. Language: english
+1. Language: **english**
 2. Location: select our location
-3. Locales: en_US.UTF-8
+3. Locales: **en_US.UTF-8**
 4. Keyboard: configure your keyboard
 5. Hostname: give a name to your machine, *This name will be visible on the network*
-6. Domain: type your domain name
+6. Domain: type your domain name (its not mendatory)
 7. Set root password: this password will be known only from the system administrator, *8 caracters min is a good base*
 8. Confirm the root password
-9. User acount name: Set up your complete name
+9. User acount name: Set up your complete name (this will be your acount for administrating the server)
 10. User name: Set up your acount username
 11. Password: Set up your password
 12. Confirm password
 
 ### Configuring disks
-13. Partition type: We use *Guided - use entire disk*.
+13. Partition type: We use **Guided - use entire disk**
 14. Select our disk
-15. Partition scheme: All files in one partition
-16. Partition recap: Ok -> finish partitioning
+15. Partition scheme: **All files in one partition**
+16. Partition recap: **Ok** -> finish partitioning
 17. Write changes to disk: **YES**
 18. Scan aditional CD or DVD: **NO**
 
 ### Configuring mirror
-19. Mirror country: select your country
-20. Mirrors list: Select a mirror in the list
+19. Mirror country: **select your country**
+20. Mirrors list: **Select a mirror in the list**
 
 ### Proxy
 21. Leave blank
