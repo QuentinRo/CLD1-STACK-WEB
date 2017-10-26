@@ -41,9 +41,10 @@ else
 # ajoute un utilisateur
 adduser --disabled-password --gecos "" $username
 echo $username":"$password|chpasswd
+
+mkdir /home/$username/www
 chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
-mkdir /home/$username/www
 
 
 # crée un pool php
