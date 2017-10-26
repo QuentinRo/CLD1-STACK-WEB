@@ -87,14 +87,14 @@ server {
   index index.php index.html;
 
   location / {
-    try_files $uri $uri /index.php;
+    try_files \$uri \$uri /index.php;
   }
 
   location ~ \.php$ {
-    try_files $uri =404;
+    try_files \$uri =404;
     fastcgi_index index.php;
     fastcgi_pass unix:/var/run/php7-fpm-$username.sock;
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
     include fastcgi_params;
   }
 }
@@ -113,7 +113,7 @@ mysql -u "root" -p$rootpwd < /tmp.sql
 
 # Restart nginx/php
 echo "Reloading configs !"
-service nginix reload
+service nginx reload
 service php7.0-fpm reload
 
 
