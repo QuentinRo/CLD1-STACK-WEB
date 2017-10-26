@@ -14,7 +14,7 @@ Then we can install the Nginx package
 ```bash
 sudo apt-get install nginx
 ```
-By default Nginx doesnd't start after installing the package, to start it : 
+By default Nginx doesn't start after installing the package, to start it : 
 ```bash
 sudo nginx start
 ```
@@ -32,38 +32,11 @@ To test that nginx is running, open a browser and go on localhost:80 and the def
 * /var/log/nginx/access.log: Every request to the Nginx server will be logged in this file, unless you configure the configuration file of Nginx.
 * /var/log/nginx/error.log: Any Nginx error will be recorded in this log file.
 
-Now that the server is installed, we can start to configure ir.
+If you can access your server through a browser, the installion was successful.
 
-### Nginx Configuration
-Before going into this step, php-fpm pools should be configured (at least for one site).
 
-First we're going to create a new file in the "sites-available" directory. We're going to use "app1" as an example.
 
-```bash
-sudo vi /etc/nginx/sites-available/app1
-```
-Note : The editor used doesn't matter
-~~~bash
-server {
-       listen 80;
 
-       server_name app1.com;
-
-       root /usr/share/nginx;
-       index index.php index.html;
-
-       location / {
-               try_files $uri $uri/ =404;
-       }
-
-       location ~ \.php$ {
-           try_files $uri =404;
-           
-       }
-}
-
-}
-~~~
 
 
 
