@@ -56,6 +56,12 @@ Without git our server in a non sense.
 sudo apt-get install git
 ```
 
+## Umask
+Modify for have separate home
+```bash
+echo "umask 007" >> .bashrc
+```
+
 <div align="center">
 <hr>
 
