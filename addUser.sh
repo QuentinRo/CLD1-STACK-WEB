@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Demande les infos a l'utilisateur
-echo "\033[32m"
+echo -e "\033[32m"
 echo "------------------------------------------------------"
 echo "This his the automatic user configuration script !\n"
 echo "Follow the instructions !\n"
-echo "\033[0m"
+echo -e "\033[0m"
 
 echo 
 echo "Enter the new username : "
@@ -31,9 +31,9 @@ echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
   echo
-  echo "\033[33m"
+  echo -e "\033[33m"
   echo "Canceled !"
-  echo "\033[0m"
+  echo -e "\033[0m"
   echo
 else
 
@@ -43,12 +43,12 @@ adduser --disabled-password --gecos "" $username
 echo $username":"$password|chpasswd
 chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
-
+mkdir /home/$username/www
 
 
 # crée un pool php
 
-cat > /etc/php/7.0/fpm/pool.d/$username.config <<TEXTBLOCK
+cat > /etc/php/7.0/fpm/pool.d/$username.conf <<TEXTBLOCK
 [$username]
 user = $username
 group = $username
@@ -114,9 +114,9 @@ TEXTBLOCK
 
 # Little sucess message
 echo
-echo "\033[32m"
+echo -e "\033[32m"
 echo "Sucessfull !"
-echo "\033[0m"
+echo -e "\033[0m"
 echo
 
 fi
