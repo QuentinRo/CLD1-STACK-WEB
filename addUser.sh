@@ -87,7 +87,7 @@ server {
   index index.php index.html;
 
   location / {
-    try_files $uri $uri/ /index.php;
+    try_files $uri $uri /index.php;
   }
 
   location ~ \.php$ {
@@ -110,6 +110,11 @@ echo "GRANT ALL ON DB_"$username".* TO "$username"@localhost IDENTIFIED BY '"$pa
 
 mysql -u "root" -p$rootpwd < /tmp.sql
 
+
+# Restart nginx/php
+echo "Reloading configs !"
+service nginix reload
+service php7.0-fpm reload
 
 
 # Little sucess message
