@@ -25,3 +25,12 @@ sudo systemctl enable php7.0-fpm
 # IF you dont want to restart your system, type this to start php now.
 sudo service php7.0-fpm start
 ```
+
+<div align="center">
+<hr>
+
+**Installation steps**
+
+[Previous](basetools.md) / [Next](Nginx.md)
+
+</div>

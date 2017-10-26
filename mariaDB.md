@@ -1,17 +1,6 @@
 # MariaDB
 
-> A internet connection is necessary for this installation guide
-
-## Installation Guide
-
-### Before start
-
-update and upgrade your packages
-```bash
-sudo apt-get update
-sudo apt-get upgrade
-```
-### MariaDB installation
+## MariaDB installation
 
 Install MariaDB
 ```bash
@@ -19,6 +8,13 @@ sudo apt-get install mariadb-server
 sudo mysql_secure_installation
 ```
 
-The installation ask a new password for the MariaDB "root" user, define one
+The installation ask a new password for the MariaDB "root" user, define one. Ans ask you ik you want to delete anonymou users, type **yes**.
 
+<div align="center">
+<hr>
 
+**Installation steps**
+
+[Previous](Nginx.md) / [Next](users.md)
+
+</div>

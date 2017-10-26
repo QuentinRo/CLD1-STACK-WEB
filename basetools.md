@@ -55,3 +55,12 @@ Without git our server in a non sense.
 ```bash
 sudo apt-get install git
 ```
+
+<div align="center">
+<hr>
+
+**Installation steps**
+
+[Previous](debian.md) / [Next](php.md)
+
+</div>
