@@ -103,3 +103,12 @@ Then create new database and user
 CREATE DATABASE username;
 GRANT ALL ON username.* TO username@localhost IDENTIFIED BY 'password';
 ```
+
+<div align="center">
+<hr>
+
+**Installation steps**
+
+[Home](README.md)
+
+</div>
