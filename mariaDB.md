@@ -15,6 +15,6 @@ The installation ask a new password for the MariaDB "root" user, define one. Ans
 
 **Installation steps**
 
-[Previous](Nginx.md) / [Next](users.md)
+[< Previous](Nginx.md) / [Next >](users.md)
 
 </div>

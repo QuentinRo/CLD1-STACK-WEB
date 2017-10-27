@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # Demande les infos a l'utilisateur
-echo -e "\033[1;32m"
-echo "------------------------------------------------------"
-echo "This his the automatic user configuration script !"
-echo "Follow the instructions !"
-echo -e "\033[0m"
+cat <<TEXTBLOCK
+\033[1;32m
+  ------------------------------------------------------
+  This his the automatic user configuration script !
+  Follow the instructions !
+  \033[0m
+TEXTBLOCK
 
 echo 
 echo "Enter the new username : "

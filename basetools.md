@@ -67,6 +67,6 @@ echo "umask 007" >> .bashrc
 
 **Installation steps**
 
-[Previous](debian.md) / [Next](php.md)
+[< Previous](debian.md) / [Next >](php.md)
 
 </div>

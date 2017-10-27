@@ -31,6 +31,6 @@ sudo service php7.0-fpm start
 
 **Installation steps**
 
-[Previous](basetools.md) / [Next](Nginx.md)
+[< Previous](basetools.md) / [Next >](Nginx.md)
 
 </div>

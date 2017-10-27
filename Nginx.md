@@ -58,6 +58,6 @@ sudo service nginx restart
 
 **Installation steps**
 
-[Previous](php.md) / [Next](mariaDB.md)
+[< Previous](php.md) / [Next >](mariaDB.md)
 
 </div>
