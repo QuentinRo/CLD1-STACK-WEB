@@ -2,11 +2,11 @@
 
 # Demande les infos a l'utilisateur
 cat <<TEXTBLOCK
-\033[1;32m
+\e\033[1;32m
   ------------------------------------------------------
   This his the automatic user configuration script !
   Follow the instructions !
-  \033[0m
+  \e\033[0m
 TEXTBLOCK
 
 echo 
@@ -56,7 +56,7 @@ chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
 
 # adds nginx user to the group
-usermod -a -G $username www-data
+usermod -G $username www-data
 
 
 # crée un pool php
@@ -68,7 +68,7 @@ group = $username
 listen = /var/run/php7.0-fpm-$username.sock
 listen.owner = www-data
 listen.group = www-data
-php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_value[disable_functions] = exec,passthru
 php_admin_flag[allow_url_fopen] = off
 pm = dynamic
 pm.max_children = 5

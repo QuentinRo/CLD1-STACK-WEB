@@ -26,7 +26,7 @@ To test that nginx is running, open a browser and go on localhost:80 and the def
 
 If you can access your server through a browser, the installion was successful.
 
-### Disable the tefault server
+### Disable the default server
 We want to deny the acces of the server if you type the ip on your navigator.
 To do this we moify the default nginx server configuration.
 
@@ -34,7 +34,7 @@ To do this we moify the default nginx server configuration.
 sudo vim /etc/nginx/sites-available/default
 ```
 
-Type this in the file :
+Clear the file, and type this in the file :
 
 ```nginx
 server {
