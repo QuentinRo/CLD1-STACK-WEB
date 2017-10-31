@@ -4,10 +4,13 @@ Install MariaDB
 ```bash
 # Install MariaDB
 sudo apt-get install mariadb-server
+```
+After that, you have to start the secure installation :
+```bash
 # Runs the secure installation
 sudo mysql_secure_installation
 ```
-When you run the secure installation, MariaDB wiil ask you some questions :
+This will ask you some questions :
 - Change the root password? **Yes**
 - Enter your root password for MariaDB
 - Remove anonymous users? **Yes**

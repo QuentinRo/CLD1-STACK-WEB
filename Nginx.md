@@ -38,7 +38,7 @@ Type this in the file :
 
 ```nginx
 server {
-  listen 80;
+  listen 80 default_server;
   server_name _;
   return 444;
 }

@@ -18,23 +18,34 @@ cd CLD1-STACK-WEB
 ```
 
 ## Manualy configure the user
+In this tuto, we will use this infos four our new user :
+- Username : **site1**
+- Password : **site1**
+- Domain : **site1.ch**
+So, replace this infos with your datas in the next steps !
+
 ### Creating new user
 First we create a new user, the command will ask you a few question about the user.
 ```bash
-adduser username
+adduser site1
+```
+
+Add a new www directory in the home of the new user :
+```bash
+mkdir /home/site1/www
 ```
 
 ### Configure php pool
-Here we create a new php pool dedicatet to the new user
+Here we create a new php pool dedicated to the new user :
 ```bash
-sudo vim /etc/php5/fpm/pool.d/app1.conf
+sudo vim /etc/php/7.0/fpm/pool.d/site1.conf
 ```
 
-And type this in the file
+And type this in the file :
 ```conf
-[app1]
-user = app1
-group = app1
+[site1]
+user = site1
+group = site1
 listen = /var/run/php7.0-fpm-site1.sock
 listen.owner = www-data
 listen.group = www-data
@@ -48,49 +59,60 @@ pm.max_spare_servers = 3
 chdir = /
 ```
 
+Now, restart php
+```bash
+sudo service php7.0-fpm restart
+```
+
 ### Nginx virtualhost Configuration
 Now that the php-fpm pools was created, we can configure the Nginx Virtualhost.
 
-First we're going to create a new file in the "sites-available" directory. We're going to use "app1" as an example.
+First we're going to create a new file in the "sites-available" directory.
 
 ```bash
-sudo vi /etc/nginx/sites-available/app1
+sudo vim /etc/nginx/sites-available/site1
 ```
-Note : The editor used doesn't matter
-~~~nginx
+
+After that, we add the nginx sites config :
+
+```nginx
 server {
-       listen 80;
+  listen 80;
 
-       server_name app1.com;
+  server_name site1.ch;
 
-       root /usr/directory;
-       index index.php index.html;
+  root /home/site1/www;
+  index index.php index.html;
 
-       location / {
-               try_files $uri $uri/ /index.php;
-       }
+  location / {
+    try_files $uri $uri/ /index.php;
+  }
 
-       location ~ \.php$ {
-           try_files $uri =404;
-           fastcgi_index index.php;
-           fastcgi_pass unix:/var/run/php7.0-fpm-app1.sock;
-        fastcgi_param SCRIPT_FILENAME            $document_root$fastcgi_script_name;
-        include fastcgi_params;
-       }
+  location ~ \.php$ {
+    try_files $uri =404;
+    fastcgi_index index.php;
+    fastcgi_pass unix:/var/run/php7.0-fpm-site1.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
+  }
 }
-~~~
-This configuration is a basic Virtual Host for a site.</br>
+```
+
+This configuration is a basic Virtual Host for a site.  
 The different elements
-* root: The source directory for sources files.
-* server_name: The name of the application. We'll use this name to access it.
-* fastcgi_pass: This is the PHP pool that was previously created.
+- **root:** The source directory for sources files.
+- **server_name:** The name of the application. We'll use this name to access it.
+- **fastcgi_pass:** This is the socket where the previously configured php pool listen.
 
 Now that the configuration file for "app1" is ready, to enable it, we'll have to create a link in the directory "sites-enabled".
 ```bash
-sudo ln -s /etc/nginx/sites-available/app1 /etc/nginx/sites-enabled/app1
+sudo ln -s /etc/nginx/sites-available/site1 /etc/nginx/sites-enabled/site1
 ```
 
 Restart the Nginx server and the virtual should be up and running.
+```bash
+sudo service nginx restart
+```
 
 ### Create new mariaDB user
 First connect you to mariaDB
