@@ -18,7 +18,7 @@ echo -e "\033[0m"
 read username
 
 echo -e "\033[1m"
-echo "Enter the new domain name of this site : "
+echo "Enter the domain name for this site : "
 echo -e "\033[0m"
 read domain
 echo
@@ -45,7 +45,11 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
   echo
   echo -e "\033[1;33m"
-  echo "Canceled !"
+cat <<TEXTBLOCK
+--------------------------------------------------------------
+                          CANCELED !
+--------------------------------------------------------------
+TEXTBLOCK
   echo -e "\033[0m"
   echo
 else
@@ -57,10 +61,10 @@ adduser --disabled-password --gecos "" $username
 echo $username":"$password|chpasswd
 
 # Add little php homepage on the future user repertory
-echo "Configuring website repertory"
+echo "- Configuring website repertory"
 mkdir /home/$username/www
 
-echo "Adding homepage with phpinfo"
+echo "- Adding homepage with phpinfo"
 cat > /home/$username/www/index.php <<TEXTBLOCK
 <div style="text-align: center;">
   <h1>Welcome to our new website !</h1>
@@ -74,7 +78,7 @@ TEXTBLOCK
 
 
 # Configure rights for the user
-echo "Configuring user rights"
+echo "- Configuring user rights"
 chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
 
@@ -83,7 +87,7 @@ usermod -G $username www-data
 
 
 # create php pool
-echo "Configuring php pool"
+echo "- Configuring php pool"
 cat > /etc/php/7.0/fpm/pool.d/$username.conf <<TEXTBLOCK
 [$username]
 user = $username
@@ -104,7 +108,7 @@ TEXTBLOCK
 
 
 # config nginx
-echo "Configuring nginx"
+echo "- Configuring nginx"
 cat > /etc/nginx/sites-available/$username <<TEXTBLOCK
 server {
   listen 80;
@@ -134,7 +138,7 @@ ln -s /etc/nginx/sites-available/$username /etc/nginx/sites-enabled/$username
 
 
 # utilisateur mariaDB
-echo "Creating database"
+echo "- Creating database"
 echo "CREATE DATABASE DB_"$username";" > /tmp.sql
 echo "GRANT ALL ON DB_"$username".* TO "$username"@localhost IDENTIFIED BY '"$password"';" >> /tmp.sql
 
@@ -142,10 +146,10 @@ mysql -u "root" -p$rootpwd < /tmp.sql
 
 
 # Restart nginx/php
-echo "Reloading configs"
+echo "- Reloading configs"
 service nginx reload
 service php7.0-fpm reload
-echo "Config reloaded"
+echo "- Config reloaded"
 
 
 # Little sucess message
