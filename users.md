@@ -28,6 +28,7 @@ So, replace this infos with your datas in the next steps !
 First we create a new user, the command will ask you a few question about the user.
 ```bash
 adduser site1
+chown -R site2:site2 /home/site2
 ```
 
 Add a new www directory in the home of the new user :
