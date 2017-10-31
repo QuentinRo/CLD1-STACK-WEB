@@ -1,8 +1,4 @@
-# Nginx
-
-## Nginx Installation on a Debian distribution
-
-In this guide I will be using the "sudo" command which may not be installed in every distribution of Debian.
+# Nginx installation
 
 ### Install the basic package
 
