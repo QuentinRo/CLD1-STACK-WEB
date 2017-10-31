@@ -1,4 +1,4 @@
-# Nginx installation
+# NGINX
 
 ### Install the basic package
 
@@ -10,9 +10,11 @@ By default Nginx doesn't start after installing the package, to start it :
 ```bash
 sudo service nginx start
 ```
-To test that nginx is running, open a browser and go on localhost:80 and the default welcome Nginx page should show up.
+To test that nginx is running, open a browser and go on serverIp:80 and the default welcome Nginx page should show up.
+> Use `ip addr` to get the ip of our server.
 
 ### Nginx Files
+Some infos about the config files of nginx
 
 #### Server Configuration Files
 * `/etc/nginx`: The Nginx configuration directory, all configuration files are stored there.
@@ -24,7 +26,6 @@ To test that nginx is running, open a browser and go on localhost:80 and the def
 * `/var/log/nginx/access.log`: Every request to the Nginx server will be logged in this file, unless you configure the configuration file of Nginx.
 * `/var/log/nginx/error.log`: Any Nginx error will be recorded in this log file.
 
-If you can access your server through a browser, the installion was successful.
 
 ### Disable the default server
 We want to deny the acces of the server if you type the ip on your navigator.

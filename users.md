@@ -1,10 +1,10 @@
 # Configuring new user website
 To add a new user on the server, with his ssh user and his mariaDB acces, we need a few steps of configuration.
 To do this configuration quickly, we created a .sh script. This script will automaticaly create the user and all the needed configuration.
-If you **dont want** to use this script we can manualy do the configuration following the next steps.
+If you **dont want** to use this script we can manualy do the configuration following the steps a little lower.
 
 ## Using the .sh Script
-Just launch the addUser.sh as root, and follow the steps.
+Just launch the **addUser.sh as root**, and follow the steps.
 The best way to use this .sh file on your system is to clone this repo on our home directory.
 ```bash
 # go tou our directory
@@ -14,21 +14,23 @@ git clone https://github.com/bastiennicoud/CLD1-STACK-WEB.git
 # move into the freshly cloned repo
 cd CLD1-STACK-WEB
 # launch the addUser.sh script
-./addUser.sh
+bash addUser.sh
 ```
 
 ## Manualy configure the user
-In this tuto, we will use this infos four our new user :
+In this tuto, we will use this example infos four our new user :
 - Username : **site1**
 - Password : **site1**
 - Domain : **site1.ch**
-So, replace this infos with your datas in the next steps !
 
 ### Creating new user
 First we create a new user, the command will ask you a few question about the user.
 ```bash
+# adds the user
 adduser site1
+# additional config
 chown -R site1:site1 /home/site1
+chmod -R 4770 /home/site1
 ```
 
 Add a new www directory in the home of the new user :
@@ -124,7 +126,7 @@ mysql -u root -p
 Then create new database and user
 ```sql
 CREATE DATABASE username;
-GRANT ALL ON username.* TO username@localhost IDENTIFIED BY 'password';
+GRANT ALL ON site1.* TO site1@localhost IDENTIFIED BY 'password';
 ```
 
 <div align="center">

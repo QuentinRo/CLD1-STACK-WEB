@@ -10,6 +10,7 @@
 </div>
 
 ## Documentation
+You can follow these steps to easily install this stack !
 - [Debian installation](debian.md)
 - [Basic tooling installation](basetools.md)
 - [PHP installation](php.md)
@@ -22,7 +23,7 @@ We found here the script to auto add new user and configure his site. [AddUserSc
 More infos about this script [here](users.md)
 
 ## Isolation test by **@phurni**
-This stack correctly matches @phurni test criteria, you can fount the test here [isolation_test](isolation_test.md)
+Use this test to verify the sites isolation [isolation_test](isolation_test.md).
 
 ## Lesson goals (MOD-CLD1)
 [objectifs](sharedhosting.md)

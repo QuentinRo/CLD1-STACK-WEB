@@ -1,12 +1,10 @@
-# Debian installation guide
-
-A quick installation guide of debian for the stack web.
+# Debian
 
 ## Installation !
 
 ### Get the .iso
 
-In this tuto we use the last version of debian **stretch** 9.2.1, but we can use a other version of debian.
+In this tuto we use the last version of debian **stretch** 9.2.1, but we can use an other version of debian.
 > Note : if you use non **stretch** version of debian, this guide may not work properly.
 You can get the latest stable .iso file on this url: [debian stable builds](https://www.debian.org/CD/http-ftp/#stable)
 
@@ -73,11 +71,17 @@ Ok we are ready to start the installation of debian 9.
 Now we have a complete install of debian. You can log you in with your usrername and password. **Never connect with root by default**
 
 ### Finalizing the install
-Just a few things to finalize to get all the packages up to date.
+Just a few things to finalize the install, get all the packages up to date.
 1. Login with your acount
 2. Use `su` to connect you with the root user
 3. type the root password
 4. run `apt-get update` This will just update the list of packages sources of the system.
+
+## Modify the umask
+For the best home repertory separation, we have to modify the umask.
+```bash
+echo "umask 007" >> /etc/profile
+```
 
 <div align="center">
 <hr>

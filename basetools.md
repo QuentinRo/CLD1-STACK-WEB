@@ -20,13 +20,13 @@ If you want to give the root privileges to an other administrator of your system
 SSH is a protocol that allows to remote connexion to the terminal of your server with a simple SSH client. After installing ssh we simply use a ssh client on your PC to connect you on the ip of your server.
 
 ### Installing SSH server
-In our case we installed the ssh server on our machine during debian installation. But if dont have install ssh-server on our machine, simply run:
+**In our case we installed the ssh server on our machine during debian installation.** But if dont have install ssh-server on our machine, simply run:
 ```bash
 sudo apt-get install openssh-server
 ```
 
 ### Installing an SSH client
-Tu use a ssh connexion you need a client on our local machine.
+Tu use a ssh connexion you need a client on **our local machine.**
 - Linux
     - `sudo apt-get install openssh`
 - MacOS
@@ -45,7 +45,7 @@ ssh username@192.168.1.1
 > If you dont know the ip of our server, simply run the `ip addr` command
 
 ## VIM
-Vim is a pwerful comand line editor. We are going to use it to modify conf files
+Vim is a pwerful comand line editor. We are going to use it to modify config files.
 ```bash
 sudo apt-get install vim
 ```
@@ -54,12 +54,6 @@ sudo apt-get install vim
 Without git our server in a non sense.
 ```bash
 sudo apt-get install git
-```
-
-## Umask
-Modify for have separate home
-```bash
-echo "umask 007" >> .bashrc
 ```
 
 <div align="center">

@@ -1,5 +1,4 @@
-# Installation of PHP
-Here we install php and base modules to use it comfortably.
+# PHP
 
 ## PHP 7 fpm
 The repositories from debian9 comes by default with php7.
