@@ -31,18 +31,18 @@
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `hello` varchar(256) DEFAULT NULL,
         PRIMARY KEY (id)
-      )');
+      );');
 
-      $DB->exec('INSERT INTO `tutu` (`hello`) VALUES (`HEHEHEH this insert works well !`)');
+      $DB->exec('INSERT INTO tutu (`hello`) VALUES (`HEHEHEH this insert works well !`);');
 
-      $stmt = $DB->query('SELECT * FROM tutu');
+      $stmt = $DB->query('SELECT * FROM tutu;');
 
       echo "DB insertion OK";
-      print_r($stmt->fetchAll());
+      print_r($stmt->fetchAll(PDO::FETCH_ASSOC));
 
 
     } catch(PDOexeption $e) {
-      return $e;
+      print_r($e);
     }
 
   } else {
