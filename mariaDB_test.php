@@ -27,9 +27,10 @@
     try{
       $DB = new PDO('mysql:dbname=' . $userdb . ';host=localhost', $username, $userpass);
 
-      $DB->exec('CREATE TABLE IF NOT EXISTS `tutu` (
+      $DB->exec('CREATE TABLE `tutu` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `hello` varchar(256) DEFAULT NULL,
+        PRIMARY KEY (id)
       )');
 
       $DB->exec('INSERT INTO `tutu` (`hello`) VALUES (`HEHEHEH this insert works well !`)');
