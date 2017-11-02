@@ -8,7 +8,7 @@ cat <<TEXTBLOCK
  He create new user and the related config for his Web stack.
                   Follow the instructions !
 --------------------------------------------------------------
-	_      _                               
+	 _      _                               
 	| |    (_)                              
 	| |     _  _ __   _   _ __  __          
 	| |    | || '_ \ | | | |\ \/ /          
