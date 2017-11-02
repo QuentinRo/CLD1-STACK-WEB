@@ -1,12 +1,14 @@
 <?php
 
-  if(empty('$_POST')){
+  if(empty($_POST['userdb'])){
     ?>
     <h1>Enter your database identifiers</h1>
     <form action="mariaDB_test.php" method="POST"></form>
       <input type="text" name="username">
       <input type="text" name="userpass">
       <input type="text" name="userdb">
+
+      <input type="submit">
     </form>
     <?php
   } else {
