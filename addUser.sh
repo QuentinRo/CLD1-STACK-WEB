@@ -30,7 +30,7 @@ read -s password
 echo
 
 echo -e "\033[1m"
-echo "Enter the mysql root password : "
+echo "Enter the actual mysql root password : "
 echo -e "\033[0m"
 read -s rootpwd
 echo
@@ -83,7 +83,7 @@ chown -R $username:$username /home/$username
 chmod -R 4770 /home/$username
 
 # adds nginx user to the group
-usermod -G $username www-data
+usermod -a -G $username www-data
 
 
 # create php pool
@@ -157,7 +157,7 @@ echo -e "\033[1;32m"
 cat <<TEXTBLOCK
 --------------------------------------------------------------
                   User sucessfuly created !
-                         Enjoy work !
+                         Enjoy your work !
 --------------------------------------------------------------
                     Username : $username
                     Password : ***

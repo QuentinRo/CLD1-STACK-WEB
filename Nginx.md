@@ -2,7 +2,7 @@
 
 ### Install the basic package
 
-Then we can install the Nginx package
+We'll start by installing the Nginx package
 ```bash
 sudo apt-get install nginx
 ```
@@ -14,6 +14,7 @@ To test that nginx is running, open a browser and go on serverIp:80 and the defa
 > Use `ip addr` to get the ip of our server.
 
 ### Nginx Files
+
 Some infos about the config files of nginx
 
 #### Server Configuration Files

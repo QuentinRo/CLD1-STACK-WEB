@@ -19,11 +19,11 @@ You can follow these steps to easily install this stack !
 - [Configuring a user website](users.md)
 
 ## Auto add user script
-We found here the script to auto add new user and configure his site. [AddUserScript](addUser.sh)  
+This script is an automated virtual host creation. [AddUserScript](addUser.sh)  
 More infos about this script [here](users.md)
 
 ## Isolation test by **@phurni**
 Use this test to verify the sites isolation [isolation_test](isolation_test.md).
 
 ## Lesson goals (MOD-CLD1)
-[objectifs](sharedhosting.md)
+[objectives](sharedhosting.md)

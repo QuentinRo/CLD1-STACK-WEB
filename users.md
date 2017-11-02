@@ -18,7 +18,7 @@ bash addUser.sh
 ```
 
 ## Manualy configure the user
-In this tuto, we will use this example infos four our new user :
+In this tuto, we will use this example infos for our new user :
 - Username : **site1**
 - Password : **site1**
 - Domain : **site1.ch**
@@ -33,7 +33,7 @@ chown -R site1:site1 /home/site1
 chmod -R 4770 /home/site1
 ```
 
-Add a new www directory in the home of the new user :
+Add a new www directory in the home diretory of the new user :
 ```bash
 mkdir /home/site1/www
 ```
@@ -68,9 +68,9 @@ sudo service php7.0-fpm restart
 ```
 
 ### Nginx virtualhost Configuration
-Now that the php-fpm pools was created, we can configure the Nginx Virtualhost.
+Now that the php-fpm pool was created, we can configure the Nginx Virtualhost.
 
-First we're going to create a new file in the "sites-available" directory.
+First we're going to create a new file in the "sites-available" directory of the Nginx directory.
 
 ```bash
 sudo vim /etc/nginx/sites-available/site1
@@ -107,7 +107,7 @@ The different elements
 - **server_name:** The name of the application. We'll use this name to access it.
 - **fastcgi_pass:** This is the socket where the previously configured php pool listen.
 
-Now that the configuration file for "app1" is ready, to enable it, we'll have to create a link in the directory "sites-enabled".
+Now that the configuration file for "site1" is ready, to enable it, we'll have to create a link in the directory "sites-enabled".
 ```bash
 sudo ln -s /etc/nginx/sites-available/site1 /etc/nginx/sites-enabled/site1
 ```
@@ -123,7 +123,7 @@ First connect you to mariaDB
 mysql -u root -p
 ```
 
-Then create new database and user
+Then create a new database and user
 ```sql
 CREATE DATABASE username;
 GRANT ALL ON site1.* TO site1@localhost IDENTIFIED BY 'password';

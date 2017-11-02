@@ -18,7 +18,7 @@ sudo apt-get install php-curl
 ```
 
 ## Automaticly start PHP-fpm
-Just type this to automaticly start php-fpm wen your server starts.
+Just type this to automatically start php-fpm when your server starts.
 ```bash
 sudo systemctl enable php7.0-fpm
 # IF you dont want to restart your system, type this to start php now.
