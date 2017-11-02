@@ -3,7 +3,7 @@
   if(empty($_POST['userdb'])){
     ?>
     <h1>Enter your database identifiers</h1>
-    <form action="mariaDB_test.php" method="POST"></form>
+    <form action="mariaDB_test.php" method="POST">
       <input type="text" name="username">
       <input type="text" name="userpass">
       <input type="text" name="userdb">
