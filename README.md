@@ -26,7 +26,7 @@ More infos about this script [here](users.md)
 Use this test to verify the sites isolation [isolation_test](isolation_test.md).
 
 ## MariaDB test
-To test connexion and interaction with DB [isolation_test](isolation_test.md).
+To test connexion and interaction with DB [isolation_test](maraiaDB_test.md).
 
 ## Lesson goals (MOD-CLD1)
 [objectives](sharedhosting.md)
