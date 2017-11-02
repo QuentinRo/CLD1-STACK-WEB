@@ -162,6 +162,7 @@ cat <<TEXTBLOCK
                     Username : $username
                     Password : ***
                  Domain Name : $domain
+                SQL Database : DB_$username
 
      You can use your identifiers to copy files into your
             dedicated repertory with CP over SSH
