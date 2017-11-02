@@ -18,7 +18,7 @@
   
 <?php
 
-  if($_POST['userdb'] && $_POST['username'] && $_POST['userpass']){
+  if(isset($_POST['userdb']) && isset($_POST['username']) && isset($_POST['userpass'])){
 
     $username = $_POST['username'];
     $userpass = $_POST['userpass'];
@@ -33,7 +33,7 @@
         PRIMARY KEY (id)
       )');
 
-      $DB->exec('INSERT INTO tutu (hello) VALUES (`HEHEHEH this insert works well !`)');
+      $DB->exec('INSERT INTO tutu (hello) VALUES ("He this insert works well !")');
 
       $stmt = $DB->query('SELECT * FROM tutu');
 
