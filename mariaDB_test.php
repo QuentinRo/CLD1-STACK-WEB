@@ -18,7 +18,7 @@
     $userdb = $_POST['userdb'];
 
     try{
-      $DB = new PDO('mysql:dbname=dudelist;host=localhost', $username, $userpass, $userdb);
+      $DB = new PDO('mysql:dbname=' . $userdb . ';host=localhost', $username, $userpass);
 
       $DB->exec('CREATE TABLE IF NOT EXISTS `tutu` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
