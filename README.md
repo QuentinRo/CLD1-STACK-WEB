@@ -23,10 +23,10 @@ This script is an automated virtual host creation. [AddUserScript](addUser.sh)
 More infos about this script [here](users.md)
 
 ## Isolation test by **@phurni**
-Use this test to verify the sites isolation [isolation_test](isolation_test.md).
+Use this test to verify the sites isolation [isolation_test](isolation_test.php).
 
 ## MariaDB test
-To test connexion and interaction with DB [isolation_test](maraiaDB_test.md).
+To test connexion and interaction with DB [mariaDB_test](maraiaDB_test.php).
 
 ## Lesson goals (MOD-CLD1)
-[objectives](sharedhosting.md)
+[goals](sharedhosting.md)
